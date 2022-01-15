@@ -1,2 +1,3 @@
 # treasure-boat-monsters_v3.0
 Sailing ship game with monsters in sea, even strong wind... 
+Now, writing cords daybyday...（ハロー）
