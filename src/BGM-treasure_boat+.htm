@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<!-- Tresure_Boat ver1.4 (c) tmlb-works 2022.5 -->
+<!-- ver1.2 2018.9, ver1.3 2021.9, ver1.4 2022.5  -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+  <script type="text/javascript">
+    var audioElem;
+
+    function PlaySound1(){
+      audioElem = new Audio();
+      audioElem.src = "./pic/tr_boat_lv1_202205.mp3";
+      audioElem.onended = function(){
+              this.play();
+      }
+      audioElem.play();
+    }
+     function PlaySound2(){
+      audioElem = new Audio();
+      audioElem.src = "./pic/tr_boat_lv2_202205.mp3";
+      audioElem.onended = function(){
+              this.play();
+      }
+      audioElem.play();
+    }
+    function StopSound(){
+      audioElem.pause();
+    }
+
+    function Volume(flag) {
+      if (0 < flag) {
+        if (0.9 < audioElem.volume) {
+          audioElem.volume = 1;
+        } else {
+          audioElem.volume += 0.1;
+        }
+      } else {
+        if (audioElem.volume < 0.1) {
+          audioElem.volume = 0;
+        }
+        else {
+          audioElem.volume -= 0.1;
+        }
+      }
+    }
+
+</SCRIPT>
+<style type="text/css">
+</style>
+</head>
+<body background="./pic/bgmp.PNG">
+  <a href="javascript:void(0);" onclick="PlaySound1();"><img src="./pic/btn01.gif"></a><br>
+  <a href="javascript:void(0);" onclick="PlaySound2();"><img src="./pic/btn01a.gif"></a><br>
+  <a href="javascript:void(0);" onclick="StopSound();"><img src="./pic/btn02.gif"></a><br>
+  <a href="javascript:void(0);" onclick="Volume(1);"><img src="./pic/btn03.gif"></a><br>
+  <a href="javascript:void(0);" onclick="Volume(-1);"><img src="./pic/btn04.gif"></a><br>
+<form>
+<select onChange="top.location.href=value">
+<option value="">-</option>
+<option value="../treasure_boat_adv_start.htm">Top</option>
+<option value="./treasure_boat_frame.htm">サメ</option>
+<option value="./treasure_boat_frame2.htm">イカ</option>
+</select>
+</body>
+</html>
